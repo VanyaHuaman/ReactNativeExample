@@ -1,0 +1,19 @@
+{
+    "name": "ReactNativeExample",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "npx react-native run-android"
+    },
+    "dependencies": {
+        "@babel/core": "*",
+        "@babel/preset-env": "7.1.6",
+        "react": "18.2.0",
+        "react-native": "^0.72.7"
+    },
+    "devDependencies": {
+        "metro": "^0.80.1",
+        "metro-config": "^0.80.1",
+        "metro-core": "^0.80.1"
+    }
+}
