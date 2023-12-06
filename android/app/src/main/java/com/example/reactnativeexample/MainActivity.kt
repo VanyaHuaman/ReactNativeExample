@@ -16,5 +16,9 @@ class MainActivity : AppCompatActivity() {
             val reactActivityIntent = Intent(this, ReactActivity::class.java)
             startActivity(reactActivityIntent)
         }
+        binding.nativeWrapperNavButton.setOnClickListener {
+            val nativeWrapperActivityIntent = Intent(this, NativeWrapperActivity::class.java)
+            startActivity(nativeWrapperActivityIntent)
+        }
     }
 }

@@ -20,7 +20,20 @@ const styles = StyleSheet.create({
  },
 });
 
+const HelloComponent = () => {
+ return (
+  <View style={styles.container}>
+   <Text style={styles.hello}>Hello, Component</Text>
+  </View>
+  );
+};
+
 AppRegistry.registerComponent(
  'ReactNativeExample',
  () => HelloWorld,
+ );
+
+AppRegistry.registerComponent(
+ 'HelloComponent',
+ () => HelloComponent,
  );

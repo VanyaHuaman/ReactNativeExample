@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ReactNativeExample</string>
     <string name="react_native">React Native</string>
+    <string name="toolbar_menu">toolbar_menu</string>
+    <string name="toolbar_nav_back_button">toolbar nav back button</string>
+    <string name="native_wrapper">Native Wrapper</string>
+    <string name="native_toolbar">Native Toolbar</string>
 </resources>

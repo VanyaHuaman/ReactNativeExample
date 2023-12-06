@@ -53,6 +53,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:hermes-android")
     testImplementation("junit:junit:4.13.2")
