@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent(
- 'MyReactNativeApp',
+ 'ReactNativeExample',
  () => HelloWorld,
  );
