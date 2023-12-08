@@ -5,4 +5,7 @@
     <string name="toolbar_nav_back_button">toolbar nav back button</string>
     <string name="native_wrapper">Native Wrapper</string>
     <string name="native_toolbar">Native Toolbar</string>
+    <string name="list">List</string>
+    <string name="native_list_item">Native List Item</string>
+    <string name="multi_fragment">Multi Fragment</string>
 </resources>
