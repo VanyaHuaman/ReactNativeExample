@@ -12,9 +12,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.reactNativeNavButton.setOnClickListener {
-            val reactActivityIntent = Intent(this, ReactActivity::class.java)
-            startActivity(reactActivityIntent)
+        binding.listNavButton.setOnClickListener {
+            val listActivity = Intent(this, ListActivity::class.java)
+            startActivity(listActivity)
+        }
+        binding.nativeWrapperNavButton.setOnClickListener {
+            val nativeWrapperActivityIntent = Intent(this, NativeWrapperActivity::class.java)
+            startActivity(nativeWrapperActivityIntent)
+        }
+        binding.multiFragNavButton.setOnClickListener {
+            val multiActivity = Intent(this, MultiActivity::class.java)
+            startActivity(multiActivity)
         }
     }
 }

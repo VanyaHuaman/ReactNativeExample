@@ -13,6 +13,7 @@ class ReactNativeApp : Application(), ReactApplication {
         super.onCreate()
         SoLoader.init(this, false)
     }
+
     private val reactNativeHost =
         object : DefaultReactNativeHost(this) {
             override fun getUseDeveloperSupport() = BuildConfig.DEBUG
@@ -22,5 +23,6 @@ class ReactNativeApp : Application(), ReactApplication {
                 return packages
             }
         }
+
     override fun getReactNativeHost(): ReactNativeHost = reactNativeHost
 }
