@@ -3,6 +3,7 @@ package com.example.reactnativeexample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.reactnativeexample.databinding.ActivityMultiBinding
+import com.facebook.react.ReactNativeHost
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
 import com.facebook.soloader.SoLoader
 
@@ -25,5 +26,9 @@ class MultiActivity :
 
     override fun invokeDefaultOnBackPressed() {
         onBackPressedDispatcher.onBackPressed()
+    }
+
+    fun getReactHost(): ReactNativeHost {
+        return (application as ReactNativeApp).reactNativeHost
     }
 }

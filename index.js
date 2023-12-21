@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, SafeAreaView, Alert, NativeEventEmitter, NativeModules, DeviceEventManager} from 'react-native';
 
 const HelloWorld = () => {
   return (
@@ -22,9 +22,20 @@ const styles = StyleSheet.create({
 
 const HelloComponent = () => {
  return (
-  <View style={styles.container}>
-   <Text style={styles.hello}>Hello, Component</Text>
-  </View>
+   <View style={styles.container}>
+    <Text style={styles.hello}>Hello, Component</Text>
+   </View>
+  );
+};
+
+const MessageComponent = (props) => {
+ const androidValues = props
+ const cr_number = androidValues.cr_number
+ console.log('Props passed:', cr_number)
+ return (
+  <View style={styles.hello}>
+   <Text style={styles.hello}>{cr_number}</Text>
+   </View>
   );
 };
 
@@ -36,4 +47,9 @@ AppRegistry.registerComponent(
 AppRegistry.registerComponent(
  'HelloComponent',
  () => HelloComponent,
+ );
+
+AppRegistry.registerComponent(
+ 'MessageComponent',
+ () => MessageComponent,
  );
