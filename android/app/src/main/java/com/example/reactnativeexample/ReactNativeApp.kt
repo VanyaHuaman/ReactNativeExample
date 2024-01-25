@@ -6,12 +6,11 @@ import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
-import com.facebook.soloader.SoLoader
 
 class ReactNativeApp : Application(), ReactApplication {
     override fun onCreate() {
         super.onCreate()
-        SoLoader.init(this, false)
+
     }
 
     private val reactNativeHost =
@@ -22,6 +21,11 @@ class ReactNativeApp : Application(), ReactApplication {
                 // Packages that cannot be autolinked yet can be added manually here
                 return packages
             }
+
+            override fun getJSMainModuleName() = "index"
+            override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
+            override val isHermesEnabled: Boolean = BuildConfig.IS_HERMES_ENABLED
+            override fun getBundleAssetName(): String = "index.android.bundle"
         }
 
     override fun getReactNativeHost(): ReactNativeHost = reactNativeHost

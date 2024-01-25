@@ -12,10 +12,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.listNavButton.setOnClickListener {
-            val listActivity = Intent(this, ListActivity::class.java)
-            startActivity(listActivity)
-        }
         binding.nativeWrapperNavButton.setOnClickListener {
             val nativeWrapperActivityIntent = Intent(this, NativeWrapperActivity::class.java)
             startActivity(nativeWrapperActivityIntent)

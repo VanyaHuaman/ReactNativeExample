@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.reactnativeexample.databinding.ActivityNativeWrapperBinding
 import com.facebook.react.ReactFragment
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
-import com.facebook.soloader.SoLoader
 
 class NativeWrapperActivity :
     AppCompatActivity(), DefaultHardwareBackBtnHandler {
@@ -13,7 +12,9 @@ class NativeWrapperActivity :
     private lateinit var binding: ActivityNativeWrapperBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SoLoader.init(this, false)
+        (application as ReactNativeApp)
+            .reactNativeHost.reactInstanceManager
+            .onConfigurationChanged(this, null)
         binding = ActivityNativeWrapperBinding.inflate(layoutInflater)
         binding.toolbarBackButton.setOnClickListener {
             invokeDefaultOnBackPressed()
