@@ -8,10 +8,6 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
 
 class ReactNativeApp : Application(), ReactApplication {
-    override fun onCreate() {
-        super.onCreate()
-
-    }
 
     private val reactNativeHost =
         object : DefaultReactNativeHost(this) {
@@ -19,6 +15,7 @@ class ReactNativeApp : Application(), ReactApplication {
             override fun getPackages(): List<ReactPackage> {
                 val packages = PackageList(this).packages.toMutableList()
                 // Packages that cannot be autolinked yet can be added manually here
+                packages.add(NativeAppPackage())
                 return packages
             }
 
