@@ -1,6 +1,5 @@
 package com.example.reactnativeexample
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.reactnativeexample.databinding.ActivityMainBinding
@@ -13,12 +12,21 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         binding.nativeWrapperNavButton.setOnClickListener {
-            val nativeWrapperActivityIntent = Intent(this, NativeWrapperActivity::class.java)
-            startActivity(nativeWrapperActivityIntent)
+            NativeWrapperActivity
+                .startActivity(
+                    this,
+                    ReactNativeComponentEnum.HELLO_COMPONENT.componentName,
+                    "MainActivity"
+                )
         }
         binding.multiFragNavButton.setOnClickListener {
-            val multiActivity = Intent(this, MultiActivity::class.java)
-            startActivity(multiActivity)
+            MultiActivity
+                .startActivity(
+                    context = this,
+                    source = "MainActivity",
+                    componentOne = ReactNativeComponentEnum.REACT_NATIVE_EXAMPLE.componentName,
+                    componentTwo = ReactNativeComponentEnum.HELLO_COMPONENT.componentName,
+                )
         }
     }
 }
