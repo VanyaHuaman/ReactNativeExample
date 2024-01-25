@@ -56,6 +56,7 @@ class MultiActivity :
 
     override fun invokeDefaultOnBackPressed() {
         Log.d(TAG, "invokeDefaultOnBackPressed called")
+        // React native code could use the EXITMODULE instead
         ReactNativeCoordinator.updateExitState(componentOne)
     }
 
